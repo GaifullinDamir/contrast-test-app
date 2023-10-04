@@ -1,6 +1,7 @@
 @import '../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
 @import './base/fonts.scss';
 @import './base/variables.scss';
+@import '../font-awesome/scss/font-awesome.scss';
 
 * {
     box-sizing: border-box;
@@ -17,4 +18,9 @@
 @import './blocks/input.scss';
 @import './blocks/descr.scss';
 @import './blocks/buttons.scss';
+@import './blocks/timers.scss';
+@import './blocks/delimeters.scss';
 @import './blocks/pages/startPage.scss';
+@import './blocks/pages/testPage.scss';
+@import './blocks/components/questionOne.scss';
+@import './blocks/components/testStageOne.scss';

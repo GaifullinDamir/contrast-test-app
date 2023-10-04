@@ -1,0 +1,19 @@
+.question-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__list {
+        margin-top: 185px;
+        display: flex;
+    }
+    &__item {
+        color: $main-color;
+        font-size: 42px;
+        margin: 0 15px;
+        &_pale {
+            color: $pale-white-color;
+            font-size: 36px;
+            margin: 0 10px;
+        }
+    }
+}

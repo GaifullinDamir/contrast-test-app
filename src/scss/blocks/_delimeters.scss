@@ -1,0 +1,10 @@
+.delimeter {
+    width: 940px;
+    height: 2px;
+    background: $main-color-pale-light-op50;
+    &_task {
+        background: $main-color-pale-light-op50;
+        width: 500px;
+        height: 2px;
+    }
+}
