@@ -1,0 +1,16 @@
+.not-found {
+    min-height: 100vh;
+    background: $pale-white-color;
+    &__wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        i {
+            font-size: 150px;
+            color: $main-color;
+        }
+    }
+}
+

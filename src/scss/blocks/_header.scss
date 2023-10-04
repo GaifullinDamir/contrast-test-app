@@ -5,4 +5,8 @@
         font-size: 32px;
         color: $main-color-dark;
     }
+    &_not-found {
+        color: $main-color;
+        font-size: 72px;
+    }
 }
