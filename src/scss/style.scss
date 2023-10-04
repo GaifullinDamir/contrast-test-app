@@ -1,0 +1,20 @@
+@import '../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
+@import './base/fonts.scss';
+@import './base/variables.scss';
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    position: relative;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+@import './blocks/header.scss';
+@import './blocks/input.scss';
+@import './blocks/descr.scss';
+@import './blocks/buttons.scss';
+@import './blocks/pages/startPage.scss';

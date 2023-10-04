@@ -1,5 +1,4 @@
 import React from 'react';
-import './startPage.scss';
 
 const StartPage = () => {
   return (
@@ -9,8 +8,8 @@ const StartPage = () => {
           <h1 className='header'>Contrast Test</h1>
           <div className='descr'>Введите ФИО и номер группы для продолжения</div>
           <form className='start-page__form'>
-            <input className='input' type='text' placeholder='ФИО'/>
-            <input className='input' type='text' placeholder='Номер группы'/>
+            <input className='input' required type='text' placeholder='ФИО'/>
+            <input className='input' required type='text' placeholder='Номер группы'/>
             <button className='button'>Начать</button>
           </form>
         </div>

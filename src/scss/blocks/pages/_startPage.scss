@@ -1,0 +1,25 @@
+
+.start-page {
+    // background: linear-gradient(90deg, $base-ultralight-color-op50, #efefef);
+    background: $pale-white-color;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    &__wrapper {
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid $main-color-pale-light;
+        background: $pale-white-color;
+        border-radius: 10px;
+        padding: 55px;
+    }
+    &__form {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
