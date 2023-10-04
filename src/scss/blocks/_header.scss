@@ -1,4 +1,8 @@
 .header {
     font-size: 64px;
     color: $main-color-dark;
+    &_table {
+        font-size: 42px;
+        color: $main-color-dark;
+    }
 }
