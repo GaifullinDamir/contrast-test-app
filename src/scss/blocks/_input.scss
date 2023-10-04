@@ -9,6 +9,24 @@ input {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
+    
+}
+
+.checkbox {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+    &__input {
+        height: 15px;
+        width: 15px;
+    }
+    label {
+        font-size: 32px;
+        color: $main-color;
+    }
+    
 }
 
 input:focus{
