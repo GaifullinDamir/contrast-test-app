@@ -11,4 +11,5 @@
     font-weight: 500;
     text-transform: uppercase;
     cursor: pointer;
+    @include button_hover
 }
