@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/contrast-test-app/static/css/main.f509d7e9.css",
-    "main.js": "/contrast-test-app/static/js/main.d836270a.js",
+    "main.js": "/contrast-test-app/static/js/main.70d6cd1a.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/contrast-test-app/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/Montserrat-BlackItalic.ttf": "/contrast-test-app/static/media/Montserrat-BlackItalic.9be75be0721b5c54a837.ttf",
     "static/media/Montserrat-BoldItalic.ttf": "/contrast-test-app/static/media/Montserrat-BoldItalic.a169c71c1eb466896fe1.ttf",
@@ -19,10 +19,10 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/contrast-test-app/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/contrast-test-app/index.html",
     "main.f509d7e9.css.map": "/contrast-test-app/static/css/main.f509d7e9.css.map",
-    "main.d836270a.js.map": "/contrast-test-app/static/js/main.d836270a.js.map"
+    "main.70d6cd1a.js.map": "/contrast-test-app/static/js/main.70d6cd1a.js.map"
   },
   "entrypoints": [
     "static/css/main.f509d7e9.css",
-    "static/js/main.d836270a.js"
+    "static/js/main.70d6cd1a.js"
   ]
 }
