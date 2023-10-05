@@ -5,7 +5,7 @@ const ResultPage = () => {
     const navigate = useNavigate();
     var itemsOneStr = localStorage.getItem('firstStage');
     var resultStageOne = itemsOneStr.split(',');
-    var itemsTwoStr = localStorage.gqtItem('secondStage');
+    var itemsTwoStr = localStorage.getItem('secondStage');
     var resultStageTwo = itemsTwoStr.split(',');
     
     

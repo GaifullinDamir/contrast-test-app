@@ -17,12 +17,11 @@ const AnswerTwo = ({setIsAnswered, setTestTwoCount, items, rightAnswer, setCount
         e.preventDefault();
         setIsAnswered(false);
         setTestTwoCount(count => count + 1);
-        var rightsCount = 0
-        for (var i = 0; i < items.length; i++) {
-            var right = rightAnswer === items[i];
 
-            if (right && checkedState[i]) {
-                rightsCount++;
+        var rightsCount = 0;
+        for (var i = 0; i < items.length; i++) {
+            if ( rightAnswer === items[i] && checkedState[i]) {
+                rightsCount = 1;
             }
         }
         setCountRights(count => [...count, rightsCount]);

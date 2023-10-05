@@ -27,24 +27,26 @@ const QuestionTwo = ({testTwoCount, items, rightAnswer, setRightAnswer}) => {
     };
 
     useEffect(() => {
-        setAnswers(getRandomArray());
+        var answersTemp = getRandomArray();
+        setAnswers(answersTemp);
         var index = getRandom(0, 3);
         setRightIndex(index);
-        setRightAnswer(answers[index]);
+        setRightAnswer(answersTemp[index]);
     }, []);
 
     useEffect(() => {
-        setAnswers(getRandomArray());
+        var answersTemp = getRandomArray();
+        setAnswers(answersTemp);
         var index = getRandom(0, 3);
         setRightIndex(index);
-        setRightAnswer(answers[index]);
+        setRightAnswer(answersTemp[index]);
     }, [testTwoCount]);
 
     return (
         <div className='question-two'>
             <div className='descr_question-two'>Запомните символы</div>
             <div className='delimeter'></div>
-            <div className='question-two'>
+            <div className='question-two__list'>
                 <div className={`question-two__item${testTwoCount < 3 ? '_pale' : ''}${rightIndex === 0 ? '_right' : ''}`}>{answers[0]}</div>
                 <div className={`question-two__item${testTwoCount < 3 ? '_pale' : ''}${rightIndex === 1 ? '_right' : ''}`}>{answers[1]}</div>
                 <div className={`question-two__item${testTwoCount < 3 ? '_pale' : ''}${rightIndex === 2 ? '_right' : ''}`}>{answers[2]}</div>
