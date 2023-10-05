@@ -16,7 +16,8 @@ import TestStageTwo from "./components/TestStageTwo/TestStageTwo";
 
 function App() {
   
-  const [result, setResult] = useState();
+  // const [result, setResult] = useState();
+  
 
   return (
     <Routes>

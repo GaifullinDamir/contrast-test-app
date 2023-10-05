@@ -1,12 +1,17 @@
 import React from 'react';
 
-const AnswerOne = () => {
+const AnswerOne = ({isAnswered, setIsAnswered}) => {
+    const onSubmit = (e) => {
+        e.preventDefault();
+
+        setIsAnswered(false);
+    };
     return (
         <div className='answer-one'>
             <div className='container'>
                 <div className='descr_answer-one'>Выберите 4 символа</div>
                 <div className='delimeter'></div>
-                <form className='answer-one__form'>
+                <form className='answer-one__form' onSubmit={onSubmit}>
                     <div className='answer-one__list'>
                         <div className='checkbox'>
                             <input className='checkbox__input' type="checkbox" id="XXV" name="XXV" />
