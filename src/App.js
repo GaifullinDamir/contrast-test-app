@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import StartPage from "./pages/StartPage/StartPage";
 import TestPage from "./pages/TestPage/TestPage";
@@ -11,8 +12,6 @@ import QuestionOne from "./components/QuestionOne/QuestionOne";
 import QuestionTwo from "./components/QuestionTwo/QuestionTwo";
 import TestStageOne from "./components/TestStageOne/TestStageOne";
 import TestStageTwo from "./components/TestStageTwo/TestStageTwo";
-
-
 
 
 function App() {
