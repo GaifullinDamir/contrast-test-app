@@ -2,25 +2,23 @@ import React, { useState, useEffect} from 'react';
 import QuestionOne from '../QuestionOne/QuestionOne';
 import AnswerOne from '../AnswerOne/AnswerOne';
 
-const TestStageOne = () => {
+const TestStageOne = ({testOneCount, setTestOneCount, items}) => {
 
-    const [component, setComponent] = useState();
     const [isAnswered, setIsAnswered] = useState(false);
-    const [testCount, setTestCount] = useState(1);
+    const [rightAnswers, setRightAnswers] = useState([]);
+    const [countRights, setCountRights] = useState([]);
 
     useEffect(() => {
-        setComponent(QuestionOne);
         setTimeout(() => {
             setIsAnswered(true);
         }, 5000);
     }, []);
 
     useEffect(() => {
-        setComponent(QuestionOne);
         setTimeout(() => {
             setIsAnswered(true);
         }, 5000);
-    }, [isAnswered]);
+    }, [testOneCount]);
     
 
     return (
@@ -30,9 +28,9 @@ const TestStageOne = () => {
                     {
                         !isAnswered
                         ?
-                        <QuestionOne/>
+                        <QuestionOne testOneCount={testOneCount} items={items} rightAnswers={rightAnswers} setRightAnswers={setRightAnswers}/>
                         :
-                        <AnswerOne isAnswered={isAnswered} setIsAnswered={setIsAnswered}/>
+                        <AnswerOne setIsAnswered={setIsAnswered} setTestOneCount={setTestOneCount} items={items} rightAnswers={rightAnswers} setCountRights={setCountRights}/>
                     }
                 </div>
             </div>
