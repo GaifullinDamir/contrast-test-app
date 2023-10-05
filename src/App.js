@@ -24,16 +24,6 @@ function App() {
       <Route path="/" element={ <StartPage/> }/>
       <Route path="/test">
         <Route index element={ <TestPage/> }/>
-        <Route path="stage-one">
-          <Route index element = { <TestStageOne/> }/>
-          <Route path="answer-one" element={ <AnswerOne/> }/>
-          <Route path="question-one" element={ <QuestionOne/> }/>
-        </Route>
-        <Route path="stage-two">
-          <Route index element = { <TestStageTwo/> }/>
-          <Route path="answer-two" element={ <AnswerTwo/> }/>
-          <Route path="question-two" element={ <QuestionTwo/> }/>
-        </Route>
       </Route>
       <Route path="/result" element={ <ResultPage/>}/>
       <Route path="/*" element={ <NotFound/> }/>
