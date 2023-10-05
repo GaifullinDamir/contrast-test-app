@@ -1,12 +1,16 @@
 import React, { useState, useEffect} from 'react';
 import QuestionOne from '../QuestionOne/QuestionOne';
 import AnswerOne from '../AnswerOne/AnswerOne';
+import { useNavigate } from 'react-router-dom';
 
 const TestStageOne = ({testOneCount, setTestOneCount, items}) => {
 
     const [isAnswered, setIsAnswered] = useState(false);
     const [rightAnswers, setRightAnswers] = useState([]);
     const [countRights, setCountRights] = useState([]);
+    const navigate = useNavigate();
+
+
 
     useEffect(() => {
         setTimeout(() => {
@@ -15,6 +19,9 @@ const TestStageOne = ({testOneCount, setTestOneCount, items}) => {
     }, []);
 
     useEffect(() => {
+        if (testOneCount === 6) {
+            localStorage.setItem('firstStage', countRights);
+        }
         setTimeout(() => {
             setIsAnswered(true);
         }, 5000);
