@@ -3,11 +3,14 @@ import { useNavigate } from 'react-router-dom';
 
 const ResultPage = () => {
     const navigate = useNavigate();
-
+    var itemsStr = localStorage.getItem('firstStage');
+    var resultStageOne = itemsStr.split(',');
+    
     const onClick = (e) => {
         e.preventDefault();
         navigate('/');
     }
+
     return (
         <div className='result-page'>
             <div className='container'>
@@ -26,27 +29,27 @@ const ResultPage = () => {
                                 </tr>
                                 <tr className='result-page__table_row'>
                                     <td className='result-page__table_data'>1</td>
-                                    <td className='result-page__table_data'>2/4</td>
+                                    <td className='result-page__table_data'>{resultStageOne[0]}/4</td>
                                 </tr>
                                 <tr className='result-page__table_row'>
                                     <td className='result-page__table_data'>2</td>
-                                    <td className='result-page__table_data'>1/4</td>
+                                    <td className='result-page__table_data'>{resultStageOne[1]}/4</td>
                                 </tr>
                                 <tr className='result-page__table_row'>
                                     <td className='result-page__table_data'>3</td>
-                                    <td className='result-page__table_data'>1/4</td>
+                                    <td className='result-page__table_data'>{resultStageOne[2]}/4</td>
                                 </tr>
                                 <tr className='result-page__table_row'>
                                     <td className='result-page__table_data'>4</td>
-                                    <td className='result-page__table_data'>2/4</td>
+                                    <td className='result-page__table_data'>{resultStageOne[3]}/4</td>
                                 </tr>
                                 <tr className='result-page__table_row'>
                                     <td className='result-page__table_data'>5</td>
-                                    <td className='result-page__table_data'>1/4</td>
+                                    <td className='result-page__table_data'>{resultStageOne[4]}/4</td>
                                 </tr>
                                 <tr className='result-page__table_row'>
                                     <td className='result-page__table_data'>6</td>
-                                    <td className='result-page__table_data'>1/4</td>
+                                    <td className='result-page__table_data'>{resultStageOne[5]}/4</td>
                                 </tr>
                             </table>
                         </div>
