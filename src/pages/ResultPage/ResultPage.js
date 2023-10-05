@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const ResultPage = () => {
     const navigate = useNavigate();
-    
+
     const onClick = (e) => {
         e.preventDefault();
-
         navigate('/');
     }
     return (
@@ -14,8 +13,8 @@ const ResultPage = () => {
             <div className='container'>
                 <div className='result-page__wrapper'>
                     <div className='result-page__info'>
-                        <div className='result-page__fullname'>Гайфуллин Дамир Равильевич</div>
-                        <div className='result-page__groupnumber'>гр. 4411</div>
+                        <div className='result-page__fullname'>{localStorage.getItem('fullname')}</div>
+                        <div className='result-page__groupnumber'>гр. {localStorage.getItem('groupNum')}</div>
                     </div>
                     <div className='result-page__table-container'>
                         <div className='result-page__table_wrapper'>
