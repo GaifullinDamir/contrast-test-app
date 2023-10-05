@@ -27,7 +27,6 @@ const AnswerOne = ({setIsAnswered, setTestOneCount, items, rightAnswers, setCoun
             }
         }
         setCountRights(count => [...count, rightsCount]);
-        console.log(checkedState);
     };
     return (
         <div className='answer-one'>

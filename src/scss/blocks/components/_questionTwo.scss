@@ -1,0 +1,29 @@
+.question-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__list {
+        margin-top: 185px;
+        display: flex;
+    }
+    &__item {
+        color: $orange-color;
+        font-size: 42px;
+        margin: 0 15px;
+        &_pale {
+            color: $main-color-dark;
+            font-size: 42px;
+            margin: 0 15px;
+            &_right {
+                color: $main-color;
+                font-size: 42px;
+                margin: 0 15px; 
+            }
+        }
+        &_right {
+            color: $main-color;
+            font-size: 42px;
+            margin: 0 15px; 
+        }
+    }
+}
