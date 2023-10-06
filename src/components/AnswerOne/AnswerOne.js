@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 
-const AnswerOne = ({setIsAnswered, setTestOneCount, items, rightAnswers, setCountRights}) => {
+const AnswerOne = ({setIsAnswered, setTestOneCount, items, rightAnswers, setCountRightsOne, countRightsOne}) => {
     const [checkedState, setCheckedState] = useState(
         new Array(items.length).fill(false)
     );
@@ -26,7 +26,8 @@ const AnswerOne = ({setIsAnswered, setTestOneCount, items, rightAnswers, setCoun
                 rightsCount++;
             }
         }
-        setCountRights(count => [...count, rightsCount]);
+        setCountRightsOne(count => [...count, rightsCount]);
+
     };
     return (
         <div className='answer-one'>

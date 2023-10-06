@@ -8,9 +8,13 @@ const TestPage = () => {
 
     const [testOneCount, setTestOneCount] = useState(0);
     const [testTwoCount, setTestTwoCount] = useState(0);
+    const [countRightsOne, setCountRightsOne] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
+        if (testOneCount === 6) {
+            localStorage.setItem('firstStage', countRightsOne);
+        }
         if(testTwoCount === 6) {
             navigate('/result');
         }
@@ -42,7 +46,7 @@ const TestPage = () => {
                         {
                             testOneCount < 6 
                             ?
-                            <TestStageOne testOneCount={testOneCount} setTestOneCount={setTestOneCount} items={items}/>
+                            <TestStageOne testOneCount={testOneCount} setTestOneCount={setTestOneCount} items={items} countRightsOne={countRightsOne} setCountRightsOne={setCountRightsOne}/>
                             :
                             <TestStageTwo testTwoCount={testTwoCount} setTestTwoCount={setTestTwoCount} items={items}/>
                         }

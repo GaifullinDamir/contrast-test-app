@@ -2,11 +2,11 @@ import React, { useState, useEffect} from 'react';
 import QuestionOne from '../QuestionOne/QuestionOne';
 import AnswerOne from '../AnswerOne/AnswerOne';
 
-const TestStageOne = ({testOneCount, setTestOneCount, items}) => {
+const TestStageOne = ({testOneCount, setTestOneCount, items, countRightsOne, setCountRightsOne}) => {
 
     const [isAnswered, setIsAnswered] = useState(false);
     const [rightAnswers, setRightAnswers] = useState([]);
-    const [countRights, setCountRights] = useState([]);
+    // const [countRights, setCountRights] = useState([]);
 
     useEffect(() => {
         setTimeout(() => {
@@ -15,9 +15,6 @@ const TestStageOne = ({testOneCount, setTestOneCount, items}) => {
     }, []);
 
     useEffect(() => {
-        if (testOneCount === 6) {
-            localStorage.setItem('firstStage', countRights);
-        }
         setTimeout(() => {
             setIsAnswered(true);
         }, 5000);
@@ -33,7 +30,7 @@ const TestStageOne = ({testOneCount, setTestOneCount, items}) => {
                         ?
                         <QuestionOne testOneCount={testOneCount} items={items} rightAnswers={rightAnswers} setRightAnswers={setRightAnswers}/>
                         :
-                        <AnswerOne setIsAnswered={setIsAnswered} setTestOneCount={setTestOneCount} items={items} rightAnswers={rightAnswers} setCountRights={setCountRights}/>
+                        <AnswerOne setIsAnswered={setIsAnswered} setTestOneCount={setTestOneCount} items={items} rightAnswers={rightAnswers} setCountRightsOne={setCountRightsOne} countRightsOne={countRightsOne}/>
                     }
                 </div>
             </div>
