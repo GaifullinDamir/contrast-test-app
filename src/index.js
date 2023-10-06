@@ -7,7 +7,7 @@ import './scss/style.scss';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/contrast-test-app">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>
