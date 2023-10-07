@@ -2,11 +2,13 @@ import React, { useState, useEffect} from 'react';
 import QuestionOne from '../QuestionOne/QuestionOne';
 import AnswerOne from '../AnswerOne/AnswerOne';
 
-const TestStageOne = ({testOneCount, setTestOneCount, items, countRightsOne, setCountRightsOne}) => {
-
+const TestStageOne = ({testOneCount, 
+        setTestOneCount, 
+        items, 
+        setCountRightsOne
+    }) => {
     const [isAnswered, setIsAnswered] = useState(false);
     const [rightAnswers, setRightAnswers] = useState([]);
-    // const [countRights, setCountRights] = useState([]);
 
     useEffect(() => {
         setTimeout(() => {
@@ -19,7 +21,6 @@ const TestStageOne = ({testOneCount, setTestOneCount, items, countRightsOne, set
             setIsAnswered(true);
         }, 5000);
     }, [testOneCount]);
-    
 
     return (
         <div className='test-stage-one'>
@@ -28,9 +29,20 @@ const TestStageOne = ({testOneCount, setTestOneCount, items, countRightsOne, set
                     {
                         !isAnswered
                         ?
-                        <QuestionOne testOneCount={testOneCount} items={items} rightAnswers={rightAnswers} setRightAnswers={setRightAnswers}/>
+                        <QuestionOne 
+                            testOneCount={testOneCount} 
+                            items={items} 
+                            rightAnswers={rightAnswers} 
+                            setRightAnswers={setRightAnswers}
+                            />
                         :
-                        <AnswerOne setIsAnswered={setIsAnswered} setTestOneCount={setTestOneCount} items={items} rightAnswers={rightAnswers} setCountRightsOne={setCountRightsOne} countRightsOne={countRightsOne}/>
+                        <AnswerOne 
+                            setIsAnswered={setIsAnswered} 
+                            setTestOneCount={setTestOneCount} 
+                            items={items} 
+                            rightAnswers={rightAnswers} 
+                            setCountRightsOne={setCountRightsOne} 
+                            />
                     }
                 </div>
             </div>
