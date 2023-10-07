@@ -44,7 +44,7 @@ const QuestionTwo = ({testTwoCount, items, rightAnswer, setRightAnswer}) => {
 
     return (
         <div className='question-two'>
-            <div className='descr_question-two'>Запомните символы</div>
+            <div className='descr_question-two'>Запомните выделенный символ</div>
             <div className='delimeter'></div>
             <div className='question-two__list'>
                 <div className={`question-two__item${testTwoCount < 3 ? '_pale' : ''}${rightIndex === 0 ? '_right' : ''}`}>{answers[0]}</div>
