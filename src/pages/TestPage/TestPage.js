@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router-dom';
 
 
 const TestPage = () => {
-
     const [testOneCount, setTestOneCount] = useState(0);
     const [testTwoCount, setTestTwoCount] = useState(0);
     const [countRightsOne, setCountRightsOne] = useState([]);
+    const [countRightsTwo, setCountRightsTwo] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -16,6 +16,7 @@ const TestPage = () => {
             localStorage.setItem('firstStage', countRightsOne);
         }
         if(testTwoCount === 6) {
+            localStorage.setItem('secondStage', countRightsTwo);
             navigate('/result');
         }
     }, [testTwoCount]);
@@ -46,9 +47,21 @@ const TestPage = () => {
                         {
                             testOneCount < 6 
                             ?
-                            <TestStageOne testOneCount={testOneCount} setTestOneCount={setTestOneCount} items={items} countRightsOne={countRightsOne} setCountRightsOne={setCountRightsOne}/>
+                            <TestStageOne 
+                                testOneCount={testOneCount} 
+                                setTestOneCount={setTestOneCount} 
+                                items={items} 
+                                countRightsOne={countRightsOne} 
+                                setCountRightsOne={setCountRightsOne}
+                                />
                             :
-                            <TestStageTwo testTwoCount={testTwoCount} setTestTwoCount={setTestTwoCount} items={items}/>
+                            <TestStageTwo 
+                                testTwoCount={testTwoCount} 
+                                setTestTwoCount={setTestTwoCount} 
+                                items={items} 
+                                countRightsTwo={countRightsTwo} 
+                                setCountRightsTwo={setCountRightsTwo}
+                                />
                         }
                     </div>
                 </div>
