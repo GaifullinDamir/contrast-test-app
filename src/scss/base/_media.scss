@@ -17,7 +17,7 @@
 
     .answer {
         &__list {
-            max-height: 350px;
+            max-height: 300px;
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
@@ -48,13 +48,13 @@
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        margin: 0 20px;
+        margin: 0 10px;
         &__input {
             height: 10px;
             width: 10px;
         }
         label {
-            font-size: 24px;
+            font-size: 20px;
             color: $main-color;
         }
     }
@@ -62,7 +62,7 @@
 
 @media (max-width: 575px) {
     .container {
-        max-width: 300px;
+        max-width: 320px;
     }
     .start-page {
         &__wrapper {
