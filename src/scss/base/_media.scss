@@ -18,17 +18,16 @@
     .answer {
         &__list {
             max-height: 300px;
-            max-width: 300px;
             display: flex;
             flex-wrap: wrap;
-            // flex-direction: column;
+            flex-direction: column;
             justify-content: space-between;
         }
     }
 
     .answer-one {
         &__form {
-            margin-top: 150px;
+            margin-top: 50px;
         }
         .button {
             margin-top: 50px;
